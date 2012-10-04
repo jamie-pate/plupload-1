@@ -232,6 +232,7 @@
 
 					// Expose id, name and size
 					files.push(new plupload.File(id, file.fileName || file.name, file.fileSize || file.size)); // fileName / fileSize depricated
+					files[files.length-1].nativeFile = file;
 				}
 
 				// Trigger FilesAdded event if we added any
